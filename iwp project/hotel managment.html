@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+h4{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0px;
+color:red;
+}
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: -50px;
+}
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+body {
+  font-family: Arial;
+}
+.coupon {
+  border: 5px dotted black;
+  width: 90%;
+  border-radius: 15px;
+  max-width: 800px;
+}
+.coupon1 {
+  padding: 2px 16px;
+  background-color: red;
+}
+.promo {
+  background: black;
+  padding: 3px;
+}
+.expire {
+  color: red;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: black;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{
+  background-color: black;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.img{ background-image:url("itcmugal.jpg");
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img src="itcmugal.jpg" alt="Snow" height="700" width="2000">
+  <div class="bottom-right"><li><a href="#more">MORE</a></li></ul>
+
+
+</div>
+  <div class="top-left"><img src="SpringHill_Suites_by_Marriott-logo-FFE4D275DF-seeklogo.com.png" height="150" width="250"></div>
+  <div class="top-right"><ul>
+  <li><a href="ourhotel.html">OUR HOTEL</a></li>
+ <li><a href="SIGNUP.html">SIGNUP</a></li>
+  <li><a href="LOGIN.html">LOGIN</a></li>
+  <li><a href="about.html">ABOUT</a></li>
+ 
+<button class="btn"><i class="fa fa-bars"></i></button>
+</ul></div>
+  <div class="bottom-left"><ul>
+  <li><a href="#overview">OVERVIEW</a></li>
+  <li><a href="#accomodation">ACCOMODATION</a></li>
+  <li><a href="#Dining">DINING</a></li>
+  <li><a href="#WELNESS">WELLNESS</a></li>
+</ul></div>
+  <div class="centered"><link rel="stylesheet" href="style.css"><div class="box">
+		<h2>Find Hotels</h2>
+		<form action="">
+			<div class="inputBox">
+				<input type="text" name="" required="">
+				<label for="">Destination</label>
+			</div>
+			<div class="inputBox">
+				<input type="date" name="" required="">
+				<label for="">Check in</label>
+			</div>
+			<div class="inputBox">
+				<input type="date" name="" required="">
+				<label for="">Check out</label>
+</div>
+			<div class="inputBox">
+				<input type="number" min="1" max="10" required="">
+				<label for="">Room(s)</label>
+			</div>
+
+	<div class="inputBox">
+				<input type="number" min="1" max="10" required="">
+				<label for="">No.of guests</label>
+			<input type="submit" name="" value="Find">
+		</form>
+	</div>
+  
+</div></div>
+</div>
+
+<button class="open-button" onclick="openForm()">Chat Here</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<div class="row">
+ <div class="column">
+<div class="coupon">
+  <div class="container">
+    <h3>Company Logo</h3>
+  </div>
+  <a href="#family"><img src="family.jpg" alt="hotel" style="width:100%;"></a>
+
+
+  <div class="container" style="background-color:black">
+    <h2><b>FLAT 20% OFF ON BOOKING NOW</b></h2> 
+    <p>FAMILY SUITE.</p>
+<p>AVAIL THIS OFFER IN AGRA,DELHI,LUCKNOW,MUMBAI ONLY</p>
+  </div>
+  <div class="container">
+   <span class="promo">Use Promo Code: FAM100</span>
+    <p class="expire">Expires: NOV 07, 2019</p>
+  </div>
+</div>
+</div>
+ <div class="column">
+<div class="coupon">
+  <div class="container">
+    <h3>Company Logo</h3>
+  </div>
+  <a href="#romantic"><img src="romantic.jpg" alt="romantic" style="width:100%;"></a>
+  <div class="container" style="background-color:black">
+    <h2><b>HURRY UP ! GRAB THE OFFER 10% OFF YOUR BOOKING</b></h2> 
+    <p>ROMANTIC SUITE.</p>
+  </div>
+  <div class="container">
+   <span class="promo">Use Promo Code: ROM100</span><br>
+
+<br><h4 id="demo"></h4>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Nov 7, 2019 00:00:00").getTime();
+// Update the count down every 1 second
+var x = setInterval(function() {
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+
+
+</div>
+  </div>
+</div>
+ <div class="column">
+<div class="coupon">
+  <div class="container">
+    <h3>Company Logo</h3>
+  </div>
+  <a href="#bussiness"><img src="BUSSINESS.jpg" alt="bussiness" style="width:100%;"></a>
+  <div class="container" style="background-color:black">
+    <h2><b>HURRY UP!! GRAB THIS OFFER FLAT 50% OFF ON YOUR BOOKING</b></h2> 
+    <p>Bussiness Purpose</p>
+  </div>
+  <div class="container">
+   <span class="promo">Use Promo Code: BUS100</span>
+    <p class="expire">Expires: NOV 07, 2019</p>
+</div>
+  </div>
+</div>
+</div><br>
+<iframe width="1500" height="500"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+</iframe><br>
+<h1><u><i>FOLLOW US ON-</H1></u></i>
+<a href="#facebook" class="fa fa-facebook"></a>
+<a href="#twitter" class="fa fa-twitter"></a>
+<a href="#linkedin" class="fa fa-linkedin"></a>
+<a href="#youtube" class="fa fa-youtube"></a>
+<a href="#instagram" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="#" class="fa fa-snapchat-ghost"></a>
+<a href="#" class="fa fa-skype"></a>
+<a href="#" class="fa fa-android"></a>
+<a href="#" class="fa fa-dribbble"></a>
+<a href="#" class="fa fa-vimeo"></a>
+<a href="#" class="fa fa-tumblr"></a>
+<a href="#" class="fa fa-vine"></a>
+<a href="#" class="fa fa-foursquare"></a>
+<a href="#" class="fa fa-stumbleupon"></a>
+<a href="#" class="fa fa-flickr"></a>
+<a href="#" class="fa fa-yahoo"></a>
+<a href="#" class="fa fa-reddit"></a>
+<a href="#" class="fa fa-rss"></a>
+<u><i><h2>Destination</h2></i></u>
+<h5>New Delhi & Gurgaon Hotels <b>|</b>Goa Hotels & Resorts<b>|</b>Mumbai Hotels<b>|</b>&nbsp;&nbsp;Chennai Hotels <b>|</b>Bengaluru Hotels <b>|</b><br>
+Hyderabad Hotels <b>|</b>Kolkata Hotels <b>|</b>Jaipur Hotels <b>|</b>Agra Hotels <b>|</b>Vadodara Hotels <b>|</b>
+<br>Aurangabad Hotels <b>|</b>Visakhapatnam Hotels <b>|</b>Panchkula - Chandigarh Hotels <b>|</b><br>
+<br>Jodhpur Hotels <b>|</b>Khimsar Hotels <b>|</b>Mussoorie Hotels <b>|</b>Coimbatore Hotels <b>|</b>Pahalgam Hotels <b>|</b><br>
+Lucknow Hotels<b>|</b>London Hotels<b>|</b>Greece Hotels<b>|</b>Maurtiuis Hotels</h5><br>
+
+
+
+</body>
+</html>

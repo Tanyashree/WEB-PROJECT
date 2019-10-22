@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif 
+background-color: black;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: black;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+
+
+/* Add padding to containers */
+.shine{
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+}
+.cancelbtn{
+	 background-color: red;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+	}
+.cancelbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<form name="f1" action="/JavaScript/Index" onsubmit="return pass_validation()"> 
+  <div class="container">
+    <h1>SIGN UP</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+<label for="First Name"><b>First Name</b></label>
+ <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input type="text" placeholder="Enter First Name" name="First Name" required>
+</div>
+<label for="Last Name"><b>Last Name</b></label>
+<div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input type="text" placeholder="Enter Last Name" name="Last Name" required>
+</div>
+    <label for="email"><b>Email</b></label>
+ <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+
+   </div>
+<label for="password1"><b>Password</b></label>
+<div class="input-container">
+    <i class="fa fa-key icon"></i>
+
+    
+   <input type="password" placeholder="Enter Password" name="password1"  required/>  
+</div>
+<label for="password2"><b>Re-enter Password</b></label>
+<div class="input-container">
+    <i class="fa fa-key icon"></i>
+  
+ <input type="password" placeholder="Re-enter Password" name="password2" required/> <br>
+
+</div>
+ <input type="checkbox" id="agreed"> I agree with <a href="#">terms & conditions</a><br>
+   
+
+  <center><button type="submit" class="registerbtn" onclick="pass_validation()">Register</button></center>
+  <center><button type="submit" class="cancelbtn">Cancel</button></center>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="LOGIN.html">Login</a>.</p>
+  </div>
+</form>
+
+
+
+<script>
+  function pass_validation()
+  {
+  var firstpassword=document.f1.password1.value;  
+  var secondpassword=document.f1.password2.value;  
+  var agreed=document.getElementById('agreed').checked;
+  if(firstpassword==secondpassword){    
+    if(!agreed)
+    {
+      alert('Please accpe the given terms and condition');
+      return false;
+    }
+    else
+      return true;
+  }  
+  else
+  {  
+    alert("Password doesn't Match!");  
+    return false;  
+  } 
+  }  
+  
+  </script>
+
+</body>
+</html>

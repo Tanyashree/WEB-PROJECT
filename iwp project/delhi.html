@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 1px;
+  cursor: pointer;
+}
+
+
+.checked {
+  color: orange;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column side">
+    <img src="delhi1.jpg" alt="delhi1" width="240" height="170"><br>
+    <img src="delhi2.jpg" alt="delhi1" width="80" height="80">
+ <img src="delhi3.jpeg" alt="delhi1" width="80" height="80">
+ <img src="delhi4.jpg" alt="delhi1" width="80" height="80"><br><br><br><br>
+<img src="delhi3.jpeg" alt="delhi1" width="240" height="170"><br>
+ <img src="delhi2.jpg" alt="delhi1" width="80" height="80">
+ <img src="delhi4.jpg" alt="delhi1" width="80" height="80">
+ <img src="delhi1.jpg" alt="delhi1" width="80" height="80">
+  </div>
+    
+  
+  <div class="column middle">
+    <h2>The Lalit </h2>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<h5>1.1 km New Delhi Railway Station</h5>
+<p style="color:gray;"> Near Railway Station</p>
+<p style="color:gray;">Swimming Pool        &nbsp;&nbsp;  &nbsp;&nbsp;Parking&nbsp;&nbsp;  &nbsp;&nbsp; House Keeping</p><br>
+<br>
+<br>
+<br><br><br>
+<h2>Hotel Aero City </h2>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star "></span>
+<span class="fa fa-star"></span>
+<h5>2 km from Mahipalpur New Delhi</h5>
+<p style="color:gray;"> Near Indra Gandhi International Airport</p>
+<p style="color:gray;">Parking     &nbsp;&nbsp;  &nbsp;&nbsp;Spa &nbsp;&nbsp;  &nbsp;&nbsp; Bakery</p><br>
+ </div>
+
+  
+  <div class="column side">
+    <h2>Included in this price</h2>
+  <p style="color:green;"> Free breakfast</p>
+<h2>INR 24919</h2>
+<p style="color:gray;"> Per night</p>
+<p style="color:gray;"> +INR 1458 taxes and charges</p>
+<p style="color:gray;"> Total Rs.24919 +taxes</p>
+<button class="button">BOOK</button><br>
+<br>
+<h2>Included in this price</h2>
+  <p style="color:green;">  Breakfast Not Included</p>
+<h2>INR 3000</h2>
+<p style="color:gray;"> Per night</p>
+<p style="color:gray;"> +INR 1200 taxes and charges</p>
+<p style="color:gray;"> Total Rs.3000 +taxes</p>
+<button class="button">BOOK</button><br>
+  </div>
+</div>
+  
+</body>
+</html>
